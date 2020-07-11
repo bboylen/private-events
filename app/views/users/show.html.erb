@@ -1,1 +1,6 @@
 <h1>Profile for <%=@user.name%></h1>
+<br>
+<h3><%=@user.name%>'s events:</h3>
+<% @user.events.each do |event| %>
+  <%= event.name %>
+<% end %>
