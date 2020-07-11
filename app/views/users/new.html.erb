@@ -1,0 +1,7 @@
+<h1>Create a New User</h1>
+
+<%= form_with model: @user do |f|%>
+  <%= f.label :name, "Name:"%>
+  <%= f.text_field :name%>
+  <%= f.submit "Create"%>
+<% end %>
