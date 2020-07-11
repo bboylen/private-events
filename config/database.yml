@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: privateevent_development
+
+test:
+  <<: *default
+  database: privateevent_test
+
+production:
+  <<: *default
+  database: privateevent_production
+  username: bboylen
+  password: 
