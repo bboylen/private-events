@@ -1,9 +1,13 @@
-<h1>Create a New User</h1>
+<h1>Create a New Event</h1>
 
 <%= form_with model: @event do |f|%>
   <%= f.label :name, "Name:"%>
   <%= f.text_field :name%>
+  <br>
   <%= f.label :description, "Event Description:"%>
   <%= f.text_field :description%>
+  <br>
+  <%= f.date_select :date %>
+  <br>
   <%= f.submit "Create"%>
 <% end %>

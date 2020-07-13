@@ -1,6 +1,15 @@
 <h1>Profile for <%=@user.name%></h1>
 <br>
 <h3><%=@user.name%>'s events:</h3>
-<% @user.events.each do |event| %>
-  <%= event.name %>
-<% end %>
+<h4>Upcoming Events</h4>
+  <ul>
+  <% @user.upcoming_events.each do |event| %>
+    <li><%= event.name %></li>
+  <% end %>
+  </ul>
+<h4>Previous Events</h4>
+  <ul>
+  <% @user.previous_events.each do |event| %>
+    <li><%= event.name %></li>
+  <% end %>
+  </ul>
